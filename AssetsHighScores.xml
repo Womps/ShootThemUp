@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HighScores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Scores>
+    <Score nickName="Womps" scoreValue="2000" />
+    <Score nickName="Chorks" scoreValue="200" />
+    <Score nickName="Slinky" scoreValue="2500" />
+    <Score nickName="Commandant" scoreValue="1500" />
+    <Score nickName="Amicia" scoreValue="3000" />
+    <Score nickName="Kitisias" scoreValue="1800" />
+    <Score nickName="Cédène" scoreValue="3500" />
+    <Score nickName="Zadox" scoreValue="500" />
+    <Score nickName="Ton1to" scoreValue="1500" />
+    <Score nickName="Ka5im" scoreValue="500" />
+  </Scores>
+</HighScores>
