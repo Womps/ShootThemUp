@@ -5,15 +5,15 @@ public class ButtonManager : MonoBehaviour
 {
     public void LoadSceneOnClick(int sceneIndex)
     {
-        GameManager gameManager = Object.FindObjectOfType<GameManager>();
+        /*GameManager gameManager = Object.FindObjectOfType<GameManager>();
         
         // Check if a GameManager has already been assigned to static variable GameManager.Instance or if it's still null.
         if (GameManager.Instance != null)
         {
             // Instantiate gameManager prefab.
             gameManager.CurrentLevel = sceneIndex;
-            gameManager.InitGame();
-        }
+            //gameManager.InitGame();
+        }*/
 
         SceneManager.LoadScene(sceneIndex);
     }
