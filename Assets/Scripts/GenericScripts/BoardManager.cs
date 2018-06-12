@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoardManager : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class BoardManager : MonoBehaviour
         this.BoardSetup();
 
         // If we are in the game scene
-        if(scene > 0)
+        if(scene > 0 && scene < 2)
         {
             // And, create the Hud.
             this.HudSetup();

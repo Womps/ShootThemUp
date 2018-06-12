@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
     private void PlayerSetup()
     {
         // Instantiate the player prefab given.
-        Instantiate(this.playerPrefab, this.transform);
+        Instantiate(this.playerPrefab, new Vector3(this.playerPrefab.transform.position.x, this.playerPrefab.transform.position.y), Quaternion.identity);
     }
 
     // Initializes the game for each level.
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         // Call the SetupScene function of the BoardManager script.
         this.boardScript.SetupScene(this.currentLevel);
 
-        if (this.currentLevel > 0)
+        if (this.currentLevel > 0 && this.currentLevel < 2)
         {
             // Then, setup the player.
             this.PlayerSetup();

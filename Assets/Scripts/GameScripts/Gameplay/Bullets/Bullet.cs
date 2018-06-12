@@ -70,18 +70,6 @@ public abstract class Bullet : MonoBehaviour
         this.Position = new Vector2(this.Position.x + (Time.deltaTime * this.Speed.x), this.Position.y + (Time.deltaTime * this.Speed.y));
     }
 
-    // Use this for initialization
-    void Start ()
-    {
-
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-      
-	}
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if ((this.Type == BulletType.SIMPLE) && (other.tag.Equals("Enemy")))
@@ -103,7 +91,7 @@ public abstract class Bullet : MonoBehaviour
         }
     }
 
-    void OnBecameInvisible()
+    public void OnBecameInvisible()
     {
         this.gameObject.SetActive(false);
     }
