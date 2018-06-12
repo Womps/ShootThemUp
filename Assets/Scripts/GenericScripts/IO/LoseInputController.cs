@@ -17,7 +17,7 @@ public class LoseInputController : MonoBehaviour
 
         if (this.esc)
         {
-            GameManager.Instance.ExitGame();
+            Application.Quit();
         }
     }
 }

@@ -25,7 +25,7 @@ public class InputController : MonoBehaviour
 
         if (this.esc)
         {
-            GameManager.Instance.ExitGame();
+            //GameManager.Instance.ExitGame();
         }
 
         if (Input.GetKey("space"))

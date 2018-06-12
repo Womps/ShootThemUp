@@ -9,6 +9,7 @@ public class BulletGun : MonoBehaviour
     private float energy;
     [SerializeField]
     private float damage;
+    [SerializeField]
     private Vector2 speed;
     private float coolDown;
     private BulletFactory bulletF;
@@ -145,7 +146,7 @@ public class BulletGun : MonoBehaviour
                     newBulletObj = this.BulletF.GetBullet(BulletType.SIMPLE);
                 }
                 this.bullets.Add(newBulletObj);
-                newBulletObj.Init(this.damage, new Vector2(20.0f, 0.0f), BulletType.SIMPLE, this.transform.position);
+                newBulletObj.Init(this.damage, this.speed, BulletType.SIMPLE, this.transform.position);
                 this.CoolDown = Time.time + 0.1f;
                 this.energy -= this.cost;
             }
