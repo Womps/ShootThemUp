@@ -4,12 +4,12 @@ using System.Collections.Generic;
 public class AIBasicBulletGun : MonoBehaviour
 {
     [SerializeField]
-    private float damage;
+    private float bulletDamage;             // How much damages the bullets shot by the AI will do.
     [SerializeField]
-    private Vector2 speed;
-    private float coolDown;
-    private BulletFactory bulletFactory;
-    private List<Bullet> bullets;
+    private Vector2 bulletSpeed;            // The speed of the bullets shot by the AI.
+    private float coolDown;                 // Cooldown between two shots by the AI.
+    private BulletFactory bulletFactory;    // Reference to the Bullet Factory.
+    private List<Bullet> bullets;           // List
 
     public void Fire()
     {
@@ -27,7 +27,7 @@ public class AIBasicBulletGun : MonoBehaviour
                 newBulletObj = this.bulletFactory.GetBullet(BulletType.ENEMY);
                 this.bullets.Add(newBulletObj);
             }
-            newBulletObj.Init(this.damage, this.speed, BulletType.ENEMY, this.transform.position);
+            newBulletObj.Init(this.bulletDamage, this.bulletSpeed, BulletType.ENEMY, this.transform.position);
             this.coolDown = Time.time + 1.5f;
         }
     }
